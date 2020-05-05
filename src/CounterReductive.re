@@ -9,7 +9,7 @@ let make = () => {
   let counter = AppStore.useSelector(selector);
   let dispatch = AppStore.useDispatch();
   <View>
-    <Text> {counter->string_of_int->React.string} </Text>
+    <Text> {counter->Belt.Int.toString->React.string} </Text>
     <Button title="Inc" onPress={_evt => {dispatch(Increment)}} />
     <Button title="Dec" onPress={_evt => {dispatch(Decrement)}} />
   </View>;

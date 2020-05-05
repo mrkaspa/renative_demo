@@ -18,7 +18,7 @@ let make = () => {
         switch (action) {
         | NoClicked => {label: "NO Clicks", count: 0}
         | Clicked => {
-            label: "Clicks " ++ string_of_int(count + 1),
+            label: "Clicks " ++ Belt.Int.toString(count + 1),
             count: count + 1,
           }
         },
