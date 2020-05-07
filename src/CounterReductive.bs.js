@@ -9,7 +9,7 @@ function selector(state) {
   return state.counter;
 }
 
-function make(attrs) {
+function CounterReductive(Props) {
   var counter = Curry._1(Store.AppStore.useSelector, selector);
   var dispatch = Curry._1(Store.AppStore.useDispatch, /* () */0);
   return React.createElement(ReactNative.View, {
@@ -29,7 +29,10 @@ function make(attrs) {
                 }));
 }
 
+var make = CounterReductive;
+
 export {
+  selector ,
   make ,
   
 }
